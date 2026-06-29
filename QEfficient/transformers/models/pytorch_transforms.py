@@ -173,6 +173,9 @@ from transformers.models.olmo2.modeling_olmo2 import (
     Olmo2Model,
     Olmo2RMSNorm,
 )
+from transformers.models.paligemma.modeling_paligemma import (
+    PaliGemmaForConditionalGeneration,
+)
 from transformers.models.phi.modeling_phi import PhiAttention, PhiDecoderLayer, PhiForCausalLM, PhiModel
 from transformers.models.phi3.modeling_phi3 import (
     Phi3Attention,
@@ -517,6 +520,9 @@ from QEfficient.transformers.models.olmo2.modeling_olmo2 import (
     QEffOlmo2ForCausalLM,
     QEffOlmo2Model,
 )
+from QEfficient.transformers.models.paligemma.modeling_paligemma import (
+    QEffPaliGemmaForConditionalGeneration,
+)
 from QEfficient.transformers.models.phi.modeling_phi import (
     QEffPhiAttention,
     QEffPhiDecoderLayer,
@@ -736,6 +742,8 @@ class KVCacheTransform(ModuleMappingTransform):
         LlavaForConditionalGeneration: QEffLlavaForConditionalGeneration,
         # Llava Next
         LlavaNextForConditionalGeneration: QEffLlavaNextForConditionalGeneration,
+        # PaliGemma
+        PaliGemmaForConditionalGeneration: QEffPaliGemmaForConditionalGeneration,
         # Gemma
         GemmaAttention: QEffGemmaAttention,
         GemmaDecoderLayer: QEffGemmaDecoderLayer,
